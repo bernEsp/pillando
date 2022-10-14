@@ -1,0 +1,28 @@
+<%= form_with(model: post) do |form| %>
+  <% if post.errors.any? %>
+    <div class="has-text-danger">
+      <h2 class="has-text-danger"><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% post.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <div class="control">
+      <div class="label">
+        <%= form.label :content, style: "display: block" %>
+      </div>
+        <%= form.text_field :content, class: 'textarea', placeholder: 'What is happening ...'%>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <%= form.submit 'Pio', class: 'button is-link' %>
+    </div>
+  </div>
+<% end %>

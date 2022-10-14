@@ -1,0 +1,50 @@
+<%= turbo_stream_from 'post' %>
+
+<div id="<%= dom_id post %>" class="card">
+
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+        <figure class="image is-48x48">
+          <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="media-content">
+        <p class="title is-6"><%= post.user.username %></p>
+      </div>
+    </div>
+
+    <div class="content">
+      <p class="subtitle"><%= post.content %></p>
+      <p> <%= time_tag post.created_at, "data-local": "time-ago" %></p>
+    </div>
+  </div>
+
+  <footer class="card-footer">
+    <div class="card-footer-item is-grouped is-grouped-multiline">
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-dark">
+            <%= link_to 'Like', '#', class: 'is-link' %>
+          </span>
+          <span class="tag is-info">
+            <%= post.likes_count.to_i %>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer-item is-grouped is-grouped-multiline">
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-dark">
+            <%= link_to 'RePio', '#' %>
+          </span>
+          <span class="tag is-info">
+            <%= post.repost_count.to_i %>
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>

@@ -5,4 +5,6 @@ class User < ApplicationRecord
   # Authentication Layer
   passwordless_with :email
 
+  # Pios
+  has_many :posts
 end
