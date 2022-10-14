@@ -6,4 +6,9 @@ module PostsHelper
      class: 'is-link'
   end
 
+  def username(post)
+    username = post.user.username
+    username = post.user.email if username.blank?
+    username
+  end
 end
