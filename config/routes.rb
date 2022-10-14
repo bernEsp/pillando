@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 're_posts/create'
   get 'likes/create'
   resources :posts, only: [:index, :new, :create]
 
