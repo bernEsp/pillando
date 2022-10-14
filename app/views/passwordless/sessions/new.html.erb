@@ -1,0 +1,24 @@
+  <p class="title">
+    Send me my magic Link!
+  </p>
+<div class="content">
+
+  <%= form_for @session, url: send(Passwordless.mounted_as).sign_in_path do |f| %>
+    <div class="field">
+      <div class="control">
+        <% email_field_name = :"passwordless[#{@email_field}]" %>
+        <%= label_tag('email', 'Email:', class: 'label') %>
+        <%= text_field_tag email_field_name, params.fetch(email_field_name, nil), class: 'input' %>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <%= f.submit I18n.t('passwordless.sessions.new.submit'), class: 'button is-link'%>
+        <%= link_to "Back to Home", root_path, class: 'is-link' %>
+      </div>
+    </div>
+  <% end %>
+
+</div>
+
