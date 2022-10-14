@@ -1,0 +1,49 @@
+<div class="tile">
+
+  <div class="tile is-parent is-vertical">
+    <article class="tile is-child box">
+      <p class="title">This is Pio
+      <%= link_to image_tag('pio.png', size: '90x40', class: 'navbar-item'), root_path %>
+      </p>
+      <p class="subtitle">Welcome</p>
+    </article>
+    <article class="tile is-child box">
+      <p class="title">Pio</p>
+      <p class="subtitle">
+        People is talking about this topics
+      </p>
+      <ul>
+        <li> Ruby </li>
+        <li> ReactJS </li>
+        <li> Turbo </li>
+        <li> Action Cable </li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="tile is-parent">
+
+    <article class="tile is-child box">
+
+      <%= yield :left_action %>
+      <figure class="image is-4by3">
+        <img src="https://bulma.io/images/placeholders/640x480.png">
+      </figure>
+
+    </article>
+
+  </div>
+
+</div>
+
+<div class="tile">
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+      <p class="title">Pios happening</p>
+      <%= yield :happening %>
+      <figure class="image is-4by3">
+        <img src="https://bulma.io/images/placeholders/640x480.png">
+      </figure>
+    </article>
+  </div>
+</div>

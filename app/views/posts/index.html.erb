@@ -1,11 +1,14 @@
+<%= content_for :happening do %>
   <div class="message">
     <div class="message-body">
       <%= link_to "New post", new_post_path, class: 'button is-link' %>
     </div>
   </div>
+<% end %>
 
+<%= content_for :left_action do %>
   <p style="color: green"><%= notice %></p>
-
+<% end %>
 
 <h1>My Stream</h1>
 

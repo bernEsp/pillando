@@ -1,6 +1,9 @@
+<%= content_for :page_title do %>
   <p class="title">
     Send me my magic Link!
   </p>
+<% end %>
+
 <div class="content">
 
   <%= form_for @session, url: send(Passwordless.mounted_as).sign_in_path do |f| %>
