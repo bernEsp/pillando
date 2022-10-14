@@ -51,7 +51,7 @@ need to run any extra setting
 
   Create an account with `username` and `password`
 
-### Then Generate your Magic link
+### Then Generate your Magic link
 
   Press Login and put your email. This won't let you know if exists or not.
   Please go and check your email. Well right now is not sending emails but you
@@ -65,7 +65,9 @@ need to run any extra setting
 _You can like any PIO. Please take a look it is reacting and showing the number
 of likes your PIO is getting
 
-### RePio
+
+###  RePio
+
 
 Other users are able to RePio yours. If you want to test please Logout and
 crete another account.
