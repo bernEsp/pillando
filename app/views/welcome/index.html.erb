@@ -1,0 +1,33 @@
+<%= content_for :left_action do %>
+  <p class="title">
+    Let's get you in
+  </p>
+
+  <p class="subtitle">
+    <%= link_to "Create an account", new_users_path, class: 'button is-info is-medium rounded'%>
+  </p>
+
+  <div class="block">
+    <h6 class="center"> OR </h6>
+  </div>
+
+  <div class="block">
+    <p class="subtitle">
+      <%= link_to "Login", auth.sign_in_path, class: 'button is-info is-medium rounded'%>
+    </p>
+  </div>
+
+<% end %>
+
+<%= content_for :happening do %>
+  <div class="box">
+    <p class="subtitle"> Important things happening <button class="delete"></button></p>
+  </div>
+  <div class="block" />
+  <div class="box">
+    <p class="subtitle"> Happening now ...
+      <button class="delete"></button>
+    </p>
+  </div>
+<% end %>
+<p style="color: green"><%= notice %></p>
